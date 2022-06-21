@@ -37,7 +37,13 @@ export default defineConfig({
     Components({
       dts: 'src/components.d.ts',
       resolvers: [
-        IconsResolver(),
+        IconsResolver({
+          prefix: 'icon',
+          alias: {
+            fas: 'fa6-solid',
+            park: 'icon-park',
+          },
+        }),
       ],
     }),
     Pages(),
